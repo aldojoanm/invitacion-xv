@@ -26,7 +26,8 @@ export default function Photos() {
   }, []);
 
   function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
-    const files = Array.from(e.target.files || []).slice(0, 10);
+    // Aseguramos que files no sea null, si es null enviamos array vacío
+    const files = e.target.files ? Array.from(e.target.files).slice(0, 10) : [];
     setSelectedFiles(files);
   }
 
@@ -65,7 +66,6 @@ export default function Photos() {
               accept="image/*"
               multiple
               onChange={handleFileChange}
-              max={10}
             />
           </label>
           <div>
