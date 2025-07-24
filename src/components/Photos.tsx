@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import Lottie from 'lottie-react';
 import corbatinAnimation from '../assets/lottie/corbatin.json';
 import './Photos.css';
@@ -14,7 +15,7 @@ const images = [
 export default function Photos() {
   const [currentImage, setCurrentImage] = useState(images[0]);
   const [showForm, setShowForm] = useState(false);
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,12 +25,12 @@ export default function Photos() {
     return () => clearInterval(interval);
   }, []);
 
-  function handleFileChange(e) {
-    const files = Array.from(e.target.files).slice(0, 10);
+  function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files || []).slice(0, 10);
     setSelectedFiles(files);
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     alert(`Se han seleccionado ${selectedFiles.length} fotos para subir.`);
     setShowForm(false);

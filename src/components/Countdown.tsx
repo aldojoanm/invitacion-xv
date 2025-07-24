@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import './Countdown.css';
 
-export default function PrincessSection() {
-  const targetDate = new Date('2025-08-23T19:30:00');
+type CountdownProps = {
+  targetDate: string;
+};
+
+export default function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   function getTimeLeft() {
     const now = new Date().getTime();
-    const distance = targetDate.getTime() - now;
+    const distance = new Date(targetDate).getTime() - now;
     if (distance < 0) return null;
     return {
       days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -20,7 +23,7 @@ export default function PrincessSection() {
   useEffect(() => {
     const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   const handleAddToCalendar = () => {
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+Años+de+Fernanda&dates=20250823T223000Z/20250824T030000Z&details=Celebración+de+mis+XV&location=Santa+Cruz+de+la+Sierra`;
@@ -29,7 +32,6 @@ export default function PrincessSection() {
 
   return (
     <section className="princess-section">
-      {/* Video de fondo */}
       <video
         className="princess-video-bg"
         src="/bg.mp4"

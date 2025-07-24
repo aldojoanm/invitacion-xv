@@ -11,17 +11,17 @@ import Schedule from './components/Schedule';
 import './App.css';
 
 export default function App() {
-  const [stage, setStage] = useState('hero');
+  const [stage, setStage] = useState<'hero' | 'welcome'>('hero');
 
-  function handleEnter() {
+  const handleEnter = () => {
     setStage('welcome');
-  }
-
+  };
 
   return (
     <>
-      {stage === 'hero' && <Hero onEnter={handleEnter} />}
-      {stage === 'welcome' && (
+      {stage === 'hero' ? (
+        <Hero onEnter={handleEnter} />
+      ) : (
         <>
           <Welcome />
           <Invitation />
