@@ -1,0 +1,63 @@
+@font-face { 
+  font-family: 'Nathalia';
+  src: url('/fonts/Nathalia.ttf') format('truetype');
+}
+
+.gift {
+  background: #02132d;
+  color: #e7c878;
+  padding: 5rem 2rem;
+  font-family: 'Giovanni', serif;
+  text-align: center;
+}
+
+.gift-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 6rem; /* más grande */
+  margin-bottom: 2rem;
+  color: #e7c878;
+  text-shadow: none;
+}
+
+.gift-box {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  border: 2px solid #b69c59;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(182, 156, 89, 0.2);
+}
+
+.lottie-animation {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+}
+
+.gift-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e7c878;
+  text-shadow: none;
+}
+
+.qr-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 4rem; 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #e7c878;
+  text-shadow: none;
+}
+
+.qr-image {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+  border-radius: 1rem;
+  border: 2px solid #b69c59;
+  box-shadow: 0 0 10px rgba(182, 156, 89, 0.3);
+}

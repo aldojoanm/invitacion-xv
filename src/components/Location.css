@@ -1,0 +1,140 @@
+.reception-section {
+  background: #02132d;
+  color: #e7c878;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.reception-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .reception-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.reception-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reception-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 15px #9795ff;
+}
+
+.reception-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  text-shadow: none;
+}
+
+.reception-info {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  font-size: 1.2rem;
+  justify-content: center;
+}
+
+.reception-time {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: none;
+  margin-top: 1.7rem;
+}
+
+.reception-location {
+  border-left: 2px solid #e7c878;
+  padding-left: 1rem;
+  text-shadow: none;
+}
+
+.reception-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.8rem;
+  border: 2px solid #e7c878;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: #e7c878;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  background: transparent;
+  text-shadow: 0 0 2px #000;
+}
+
+.reception-button:hover {
+  transform: scale(1.05);
+}
+
+.reception-right {
+  flex: 1;
+  text-align: center;
+}
+
+.dress-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #e7c878;
+}
+
+.dress-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: none;
+}
+
+.dress-type {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.dress-colors {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.color {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #fff; /* opcional: para separarlos visualmente */
+  margin-left: -10px; /* superposición hacia la izquierda */
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.color.blue1 { background: #00008b; }
+.color.blue2 { background: #0000cd; }
+.color.blue3 { background: #4169e1; }
+.color.blue4 { background: #87cefa; }
+
+.dress-note {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-shadow: none;
+  margin-top: 3rem;
+}

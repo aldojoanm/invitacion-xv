@@ -1,0 +1,128 @@
+/* ========== TIPOGRAFÍAS PERSONALIZADAS ========== */
+@font-face {
+  font-family: 'Nathalia';
+  src: url('/fonts/Nathalia.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Donatello';
+  src: url('/fonts/Donatello_W01_RegularLP.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Giovanni';
+  src: url('/fonts/ITC_Giovanni_Book_Regular.otf') format('opentype');
+}
+
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ========== ESTILOS GLOBALES ========== */
+body {
+  background-color: #000014;
+  color: #e7c878;
+  font-family: 'Giovanni', Georgia, serif;
+  line-height: 1.6;
+  text-shadow: 0 0 5px #e7c878, 0 0 10px #e7c878;
+}
+
+/* ========== ELEMENTOS GENERALES ========== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #e7c878;
+  text-shadow: 0 0 5px #e7c878;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+a {
+  color: #e7c878;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #ffd700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== BOTONES ========== */
+button {
+  background: transparent;
+  border: 2px solid #e7c878;
+  color: #e7c878;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #e7c878;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e7c878;
+  color: #000014;
+}
+
+/* ========== SECCIONES ========== */
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== SCROLLBAR PERSONALIZADA ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7c878;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000014;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

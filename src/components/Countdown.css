@@ -1,0 +1,231 @@
+.princess-section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 5rem 2rem 6rem;
+  color: #e7c878;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+  z-index: 1;
+  background: #02132d;
+}
+
+/* Video de fondo */
+.princess-video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.25;
+  filter: brightness(0.6) blur(1px);
+  pointer-events: none;
+}
+
+.princess-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 3px #000;
+}
+
+.crown-image {
+  width: 140px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.date-line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.date-box-with-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-box-label {
+  font-size: 2rem;
+  font-weight: 400;
+  text-shadow: 0 0 4px #e7c878;
+}
+
+.line {
+  width: 210px;
+  height: 1px;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.date-rectangle {
+  border: 2px solid #f1f1f1;
+  padding: 2.5rem 1.5rem;
+  border-radius: 60px;
+  box-shadow: 0 0 15px rgba(231, 200, 120, 0.7);
+  background-color: transparent;
+  min-width: 140px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #e7c878;
+  text-align: center;
+}
+
+.date-top {
+  font-size: 5rem;
+  font-family: Georgia, serif;
+  text-shadow: 0 0 2px #e7c878;
+  transform: scaleY(1.1);
+  display: inline-block;
+  margin-top: -1rem;
+}
+
+.date-middle {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: -1rem;
+  text-shadow: 0 0 2px #e7c878;
+}
+
+.date-bottom {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: -1rem;
+  text-shadow: 0 0 2px #e7c878;
+}
+
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+}
+
+.countdown-decorator {
+  font-size: 2rem;
+  color: #e7c878;
+  text-shadow: 0 0 3px #e7c878;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.count-num {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px #e7c878;
+}
+
+.count-label {
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.calendar-btn {
+  margin-top: 2.5rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid #e7c878;
+  border-radius: 1.5rem;
+  color: #e7c878;
+  font-size: 1.2rem;
+  text-shadow: 0 0 2px #000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: auto;
+  max-width: 320px;
+}
+
+.calendar-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE MÓVIL ===== */
+@media (max-width: 768px) {
+  .princess-section {
+    padding: 4rem 1rem 5rem;
+  }
+
+  .princess-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .crown-image {
+    width: 100px;
+    margin-bottom: 0.7rem;
+  }
+
+  .date-line-container {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .date-box-with-lines {
+    gap: 0.6rem;
+  }
+
+  .date-box-label {
+    font-size: 1rem;
+  }
+
+  .line {
+    width: 80px;
+  }
+
+  .date-rectangle {
+    min-width: 90px;
+    min-height: 140px;
+    padding: 1.2rem 0.8rem;
+    border-radius: 40px;
+  }
+
+  .date-top {
+    font-size: 2.8rem;
+  }
+
+  .date-middle,
+  .date-bottom {
+    font-size: 0.9rem;
+  }
+
+  .countdown-wrapper {
+    gap: 1rem;
+  }
+
+  .count-num {
+    font-size: 2rem;
+  }
+
+  .count-label {
+    font-size: 0.9rem;
+  }
+
+  .calendar-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    max-width: 280px;
+  }
+}

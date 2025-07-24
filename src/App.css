@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Nathalia';
+  src: url('/fonts/Nathalia.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Donatello';
+  src: url('/fonts/Donatello_W01_RegularLP.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Giovanni';
+  src: url('/fonts/ITC_Giovanni_Book_Regular.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  background-color: #000014;
+  color: #e7c878;
+  font-family: Georgia, serif;
+  text-shadow: 0 0 5px #e7c878, 0 0 10px #e7c878;
+}
+
+/* 🎥 Video de fondo global */
+.global-background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+  filter: brightness(0.6) blur(1px);
+}
+
+/* 🧱 Contenido por encima del video */
+.app-content-overlay {
+  position: relative;
+  z-index: 1;
+}

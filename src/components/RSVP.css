@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Donatello';
+  src: url('/fonts/Donatello_W01_RegularLP.ttf') format('truetype');
+}
+
+.rsvp {
+  background: #02132d;
+  color: #e7c878;
+  padding: 5rem 2rem;
+  font-family: 'Giovanni', serif;
+  text-align: center;
+}
+
+.rsvp-title {
+  font-family: 'Donatello', serif;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #e7c878;
+  text-shadow: 0 0 5px #b69c59;
+}
+
+.arrow-lottie {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 2.5rem auto;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.rsvp-button {
+  display: inline-block;
+  font-family: 'Giovanni', serif;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: 2px solid #e7c878;
+  border-radius: 10px;
+  color: #e7c878;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 4px #e7c878;
+}
+
+.rsvp-button:hover {
+  background-color: #e7c878;
+  color: #000014;
+}
+
+.rsvp-footer {
+  font-family: 'Donatello', serif;
+  font-size: 2rem;
+  margin-top: 3rem;
+  color: #e7c878;
+  text-shadow: 0 0 5px #b69c59;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .rsvp {
+    padding: 3rem 1.5rem;
+  }
+
+  .rsvp-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .arrow-lottie {
+    width: 120px;  /* Animación más grande en móvil */
+    height: 120px;
+    margin-bottom: 2rem;
+  }
+
+  .rsvp-button {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .rsvp-footer {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}

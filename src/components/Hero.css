@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  z-index: 1;
+  background-color: #02132d;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.25; /* ajusta según el contraste que necesites */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==== Imagen de corona ==== */
+.crown-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* ==== Título principal ==== */
+.main-title {
+  font-family: 'Nathalia', cursive;
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 5px #e7c878, 0 0 10px #e7c878;
+}
+
+/* ==== Subtítulo ==== */
+.subtitle {
+  font-family: 'Donatello', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 5px #e7c878;
+}
+
+/* ==== Flechas animadas ==== */
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.arrow span {
+  font-size: 2rem;
+  opacity: 0;
+  animation: arrowDown 1.5s infinite;
+  color: #e7c878;
+}
+
+@keyframes arrowDown {
+  0%   { transform: translateY(0); opacity: 0; }
+  30%  { opacity: 1; }
+  60%  { transform: translateY(10px); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.arrow span:nth-child(1) { animation-delay: 0s; }
+.arrow span:nth-child(2) { animation-delay: 0.3s; }
+.arrow span:nth-child(3) { animation-delay: 0.6s; }
+
+/* ==== Botón ==== */
+.hero button {
+  background: transparent;
+  border: 2px solid #e7c878;
+  color: #e7c878;
+  padding: 1.3rem 2.1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  text-shadow: 0 0 3px #e7c878;
+  transition: transform 0.3s ease;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+/* ========== RESPONSIVE MÓVIL ========== */
+@media (max-width: 768px) {
+  .crown-image {
+    width: 120px;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .arrow span {
+    font-size: 1.5rem;
+  }
+
+  .hero button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}

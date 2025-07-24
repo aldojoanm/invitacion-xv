@@ -1,0 +1,156 @@
+/* Fondo exterior que se verá fuera de la forma dorada */
+.outer-bg {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #02132d; 
+}
+
+
+/* Sección dorada */
+.invitation {
+  position: relative;
+  background: linear-gradient(to bottom, #b69c59, #a38a4a, #8f7839);
+  color: #000;
+  text-align: center;
+  padding: 10rem 2rem 8rem; /* menos arriba para espacio en móvil */
+  overflow: visible;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(182, 156, 89, 0.8);
+}
+
+/* Carpas arriba y abajo */
+.carpa {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 0;
+  fill: #b69c59;
+  z-index: 0;
+}
+
+.arriba {
+  top: 0;
+}
+
+.abajo {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+/* Contenido interno */
+.invitation-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Texto */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-family: 'Donatello', serif;
+  text-shadow: 0 0 3px #000;
+}
+
+.main-invite {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  font-family: 'Nathalia', cursive;
+  color: #fff;
+  text-shadow: 0 0 8px #000;
+}
+
+.invite-desc {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-family: Georgia, serif;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Línea con etiquetas */
+.line-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.line-label {
+  font-family: 'Nathalia', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 0 5px #000;
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #000;
+  max-width: 250px;
+  box-shadow: 0 0 5px #000;
+}
+
+/* Firma */
+.signature {
+  font-family: 'Nathalia', cursive;
+  font-size: 2.8rem;
+  margin-top: 2rem;
+  color: #fff;
+  text-shadow: 0 0 8px #000;
+}
+
+/* ========== RESPONSIVE MÓVIL ========== */
+@media (max-width: 768px) {
+  .invitation {
+    padding: 6rem 1rem 5rem;
+    border-radius: 1rem;
+  }
+
+  .carpa {
+    height: 150px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .main-invite {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .invite-desc {
+    font-size: 1rem;
+    max-width: 90vw;
+    margin-bottom: 2rem;
+  }
+
+  .line-label {
+    font-size: 1.8rem;
+  }
+
+  .line {
+    max-width: 150px;
+    height: 1.5px;
+  }
+
+  .signature {
+    font-size: 1.8rem;
+  }
+}
