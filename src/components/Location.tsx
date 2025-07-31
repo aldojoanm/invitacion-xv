@@ -1,6 +1,6 @@
 import './Location.css';
-import Lottie from 'lottie-react';
-import corbatinAnimation from '../assets/lottie/corbatin.json';
+{/* import Lottie from 'lottie-react';
+import corbatinAnimation from '../assets/lottie/corbatin.json'; */}
 
 export default function ReceptionLocation() {
   return (
