@@ -24,12 +24,12 @@ export default function App() {
       ) : (
         <>
           <Welcome />
-          <Invitation />
+          {/* <Invitation /> */}
           <Countdown targetDate="2025-08-23T19:30:00" />
           <Location />
           <Schedule />
           <Photos />
-          <Gift />
+          {/* <Gift /> */}
           <RSVP />
         </>
       )}

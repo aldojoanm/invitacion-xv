@@ -1,14 +1,16 @@
 .schedule-section {
-  padding: 5rem 2rem;
+  padding: 0rem 2rem;
   background: #02132d;
   color: #fff;
   text-align: center;
   overflow-x: auto;
+  margin-top: 0rem;
+  margin-bottom: -5rem;
 }
 
 .schedule-title {
   font-size: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   font-family: Nathalia, cursive;
   text-shadow: none;
 }
@@ -96,35 +98,68 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .schedule-section {
+    padding: 1rem;
+    margin-top: 6rem;
+    margin-bottom: -5rem;
+  }
+  
   .timeline-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .timeline-line {
-    width: 4px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    min-width: auto;
   }
 
-
-  .connector {
-    flex-direction: column;
-  }
-
-  .connector .line {
-    width: 2px;
-    height: 40px;
-  }
-
-  .connector .dot {
-    margin: 10px 0;
+  /* Alternar orden para items pares */
+  .timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .animation-wrapper,
   .text-wrapper {
     width: 100px;
+    text-align: center;
+  }
+
+  /* Línea vertical principal */
+  .timeline-line {
+    width: 4px;       /* más delgada */
+    height: 80px;     /* alto */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px; /* bordes redondeados */
+    background: linear-gradient(180deg, #b69c59 0%, #fff 100%);
+    box-shadow: 0 0 6px 1px #b69c59;
+  }
+
+  /* Línea divisora entre animación y texto con curva */
+  .connector {
+    width: 4px;      /* delgada */
+    height: 80px;    /* alta */
+    margin: 0 1rem;
+    position: relative;
+    background: linear-gradient(180deg, #fff 0%, #b69c59 100%);
+    border-radius: 20px 20px 20px 20px / 40px 40px 40px 40px; /* curva en los bordes */
+    box-shadow: 0 0 4px 0 #fff;
+  }
+
+  .connector .line {
+    width: 100%;    /* que ocupe todo el ancho del conector */
+    height: 100%;
+    background: transparent; /* ya está el background en .connector */
+  }
+
+  /* Ocultar el punto en móvil */
+  .connector .dot {
+    display: none;
   }
 }

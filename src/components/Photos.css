@@ -1,9 +1,11 @@
 .photos {
-  padding: 2rem;
+  padding: 0rem;
   background-color: #02132d;
   color: #e7c878;
   font-family: Georgia, serif;
   text-align: center;
+  margin-top: 0rem;
+  margin-bottom: -8rem;
 }
 
 .double-border-container {
@@ -131,6 +133,11 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .photos {
+    margin-bottom: -10rem;
+    padding-bottom: 0rem;
+  }
+
   .double-border-container {
     width: 260px;
     height: 350px;

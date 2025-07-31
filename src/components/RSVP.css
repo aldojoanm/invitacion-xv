@@ -6,9 +6,11 @@
 .rsvp {
   background: #02132d;
   color: #e7c878;
-  padding: 5rem 2rem;
+  padding: 0rem 0rem;
   font-family: 'Giovanni', serif;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .rsvp-title {
@@ -19,11 +21,24 @@
   text-shadow: 0 0 5px #b69c59;
 }
 
+/* Animación Lottie centrada - si usas */
 .arrow-lottie {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto 2.5rem auto;
-  transition: width 0.3s ease, height 0.3s ease;
+  transition: transform 0.3s ease;
+  display: block;
+  animation: bounce 2s infinite;
+}
+
+/* Animación sutil de rebote */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .rsvp-button {
@@ -46,6 +61,39 @@
   color: #000014;
 }
 
+/* Formulario */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.rsvp-form input {
+  padding: 0.8rem 1rem;
+  font-family: 'Giovanni', serif;
+  font-size: 1rem;
+  border: 2px solid #e7c878;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #e7c878;
+  text-shadow: 0 0 3px #b69c59;
+  outline: none;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.rsvp-form input::placeholder {
+  color: #b69c59;
+  opacity: 0.8;
+}
+
+.rsvp-form input:focus {
+  border-color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
 .rsvp-footer {
   font-family: 'Donatello', serif;
   font-size: 2rem;
@@ -66,8 +114,8 @@
   }
 
   .arrow-lottie {
-    width: 120px;  /* Animación más grande en móvil */
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 2rem;
   }
 
@@ -79,5 +127,9 @@
   .rsvp-footer {
     font-size: 1.5rem;
     margin-top: 2rem;
+  }
+
+  .rsvp-form {
+    max-width: 100%;
   }
 }

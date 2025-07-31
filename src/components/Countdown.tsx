@@ -41,7 +41,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
         playsInline
       />
 
-      <h2 className="princess-title">Me gustaría que seas parte de mi día especial</h2>
+      <h2 className="princess-title">Se parte de este día</h2>
 
       <img src="/corona.png" alt="Corona" className="crown-image" />
 
@@ -64,7 +64,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
       </div>
 
       <div className="countdown-wrapper">
-        <div className="countdown-decorator">༺༻༺༻༺༻༺</div>
+        {/* <div className="countdown-decorator">༺༻༺༻༺༻༺</div> */}
         {timeLeft ? (
           <>
             <div className="countdown-item">
@@ -87,7 +87,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
         ) : (
           <div>¡El evento ha comenzado!</div>
         )}
-        <div className="countdown-decorator">༺༻༺༻༺༻༺</div>
+        {/* <div className="countdown-decorator">༺༻༺༻༺༻༺</div> */}
       </div>
 
       <button className="calendar-btn" onClick={handleAddToCalendar}>

@@ -5,9 +5,26 @@ export default function Invitation() {
     <div className="outer-bg">
       <section className="invitation">
         {/* Carpa arriba */}
-        <svg className="carpa arriba" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path d="M0,320 C360,240 600,80 720,160 C840,240 1080,240 1440,160 L1440,0 L0,0 Z" />
-        </svg>
+        <svg
+  className="carpa arriba"
+  viewBox="0 0 1440 320"
+  preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="
+      M0,400
+      C360,120 540,30 720,250
+      C900,30 1080,120 1440,320
+      L1440,0
+      L0,0
+      Z
+    "
+  />
+</svg>
+
+
+
 
         <div className="invitation-content">
           <p className="section-title">Festejo</p>
@@ -26,8 +43,19 @@ export default function Invitation() {
         </div>
 
         {/* Carpa abajo (invertida) */}
-        <svg className="carpa abajo" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path d="M0,0 C360,80 600,240 720,160 C840,80 1080,80 1440,160 L1440,320 L0,320 Z" />
+        <svg
+          className="carpa abajo"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="
+            M0,0 
+            C480,280 720,300 720,300 
+            C720,300 960,280 1440,0 
+            L1440,320 L0,320 Z"
+          />
         </svg>
       </section>
     </div>

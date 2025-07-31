@@ -5,8 +5,8 @@ import corbatinAnimation from '../assets/lottie/corbatin.json';
 import './Photos.css';
 
 const images = [
+  '/photos/insert.jpg',
   '/photos/photo1.jpg',
-  '/photos/photo2.jpg',
   '/photos/photo3.jpg',
   '/photos/photo4.jpg',
   '/photos/photo5.jpg',
@@ -44,7 +44,7 @@ export default function Photos() {
         <img src={currentImage} alt="Foto aleatoria" />
       </div>
 
-      <div className="lottie-wrapper">
+      {/* <div className="lottie-wrapper">
         <Lottie animationData={corbatinAnimation} loop={true} />
       </div>
 
@@ -77,7 +77,7 @@ export default function Photos() {
             </button>
           </div>
         </form>
-      )}
+      )} */} 
     </section>
   );
 }

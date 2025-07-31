@@ -5,9 +5,9 @@
   margin: 0;
   overflow: hidden;
   min-height: 100vh;
-  background: #02132d; 
+  background: #02132d;
+  width: 100vw;
 }
-
 
 /* Sección dorada */
 .invitation {
@@ -17,17 +17,18 @@
   text-align: center;
   padding: 10rem 2rem 8rem; /* menos arriba para espacio en móvil */
   overflow: visible;
-  max-width: 1000px;
   margin: 0 auto;
   z-index: 1;
   border-radius: 2rem;
   box-shadow: 0 0 20px rgba(182, 156, 89, 0.8);
+  width: 100vw; /* ancho completo */
+  max-width: none; /* quitar límite */
 }
 
 /* Carpas arriba y abajo */
 .carpa {
   position: absolute;
-  width: 100%;
+  width: 100vw; /* ancho pantalla completa */
   height: 200px;
   left: 0;
   fill: #b69c59;
@@ -36,18 +37,22 @@
 
 .arriba {
   top: 0;
+  /* Invertida arriba: rota 180 grados */
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 
 .abajo {
   bottom: 0;
-  transform: rotate(180deg);
+  /* Curva abajo normal o rota si quieres */
+  /* Puedes quitar rotación si prefieres */
 }
 
 /* Contenido interno */
 .invitation-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 800px; /* limitar contenido para legibilidad */
   margin: 0 auto;
   padding: 0 1rem;
 }

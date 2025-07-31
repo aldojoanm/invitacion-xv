@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding: 5rem 2rem 6rem;
+  padding: 0rem 2rem 6rem;
   color: #e7c878;
   font-family: 'Georgia', serif;
   min-height: 100vh;
@@ -163,7 +163,9 @@
 /* ===== RESPONSIVE MÓVIL ===== */
 @media (max-width: 768px) {
   .princess-section {
-    padding: 4rem 1rem 5rem;
+    padding: 0rem 1rem ;
+    margin-top: -10rem;
+    margin-bottom: -5rem;
   }
 
   .princess-title {

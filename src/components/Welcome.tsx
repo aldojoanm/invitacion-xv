@@ -3,7 +3,6 @@ import './Welcome.css';
 export default function Welcome() {
   return (
     <section className="welcome">
-      
       <div className="welcome-content">
         <h2>XV AÑOS</h2>
         <h1>Fernanda Daniela</h1>

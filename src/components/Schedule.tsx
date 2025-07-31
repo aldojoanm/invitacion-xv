@@ -1,16 +1,13 @@
 import './Schedule.css';
 import Lottie from 'lottie-react';
 import cartaAnimation from '../assets/lottie/carta.json';
-import celebrationAnimation from '../assets/lottie/Celebration.json';
-import crownAnimation from '../assets/lottie/Crown.json';
+import celebrationAnimation from '../assets/lottie/Confetti.json';
+import crownAnimation from '../assets/lottie/corbatin.json';
 
 const events = [
   { name: "Recepción", time: "19:30", animation: cartaAnimation },
-  { name: "Acto Central", time: "20:30", animation: crownAnimation },
-  { name: "Fiesta", time: "21:30", animation: celebrationAnimation },
-  { name: "Hora Loca", time: "23:00", animation: cartaAnimation },
-  { name: "Torta", time: "01:00", animation: cartaAnimation },
-  { name: "Despedida", time: "02:00", animation: cartaAnimation },
+  { name: "Acto Central", time: "22:00", animation: crownAnimation },
+  { name: "Fiesta", time: "22:30", animation: celebrationAnimation },
 ];
 
 export default function Schedule() {

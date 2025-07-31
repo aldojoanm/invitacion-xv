@@ -31,8 +31,8 @@ export default function ReceptionLocation() {
           </a>
         </div>
 
-        <div className="reception-right">
-          {/* Reemplazamos el emoji con la animación Lottie */}
+       {/* <div className="reception-right">
+          
           <div className="dress-icon">
             <Lottie animationData={corbatinAnimation} loop={true} style={{ width: 80, height: 80, margin: '0 auto 0.5rem' }} />
           </div>
@@ -46,6 +46,7 @@ export default function ReceptionLocation() {
           </div>
           <p className="dress-note">Serán de uso exclusivo para la quinceañera</p>
         </div>
+        */}
       </div>
     </section>
   );
